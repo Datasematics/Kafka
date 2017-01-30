@@ -15,7 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.Session;
-public class Kafka_cassandra {
+public class KafkaToCassandra {
 	private static Cluster cluster;
     	private static Session session;
 	 public static void main(String[] args) throws IOException {
