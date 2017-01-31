@@ -1,0 +1,47 @@
+Kafka Consumer(Apache Kafka) To Mysql
+
+Problem Statement: 
+Use Kafka consumer to put data into Mysql from kafka topic.
+
+Tags :
+KafkaConsumer, Topic , StringDeserializer, Mysql.
+
+Use cases: 
+The Consumer API allows applications to send streams of data from topics to mysql.
+
+Description :
+A simple kafka consumer which sends  value from kafka topic to mysql table. 
+
+Pre requisites :
+1. java 1.7 or greater
+2. maven 3.3.9 
+
+Execution Steps:
+	 Project requires a pom.xml file to download all the dependencies and to execute this  pom.xml file enter the following commands
+i)	To download package
+ mvn  package   (will download all the dependencies from pom.xml file)
+
+ii)	To copy dependency :  
+mvn “dependency:copy-dependencies”
+iii)	to execute any java program  to go the target directory folder and type
+java –cp “*.jar:dependency/*” classname  
+
+Note : Before you execute this code make sure zookeeper and kafka is started.
+i)	To start zookeeper:
+/usr/lib/zookeeper/bin/zkServer.sh start
+ii)	To start kafka:
+/usr/lib/kafka/bin/kafka-server-start.sh  /etc/kafka/conf/server.properties
+
+Note : make sure topic is created in kafka if not follow the below commands to create topic.
+i)	To create topic :
+     /usr/bin/kafka-topics –create –zookeeper localhost:2181 –partitions 1 –replication-factor 1 -topics  topic_name
+
+ii)	To list the created topic 
+/usr/bin/kafka-topics –zookeeper localhost:2181 –list
+
+Known Issues: 
+1.	Make sure first zookeeper and kafka server are running.
+
+
+
+
