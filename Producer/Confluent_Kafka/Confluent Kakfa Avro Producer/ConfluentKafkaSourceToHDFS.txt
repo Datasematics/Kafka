@@ -1,0 +1,42 @@
+Problem Statement: 
+Use Kafka producer to fetch data and insert nto kafka topic.
+
+Tags :
+KafkaProducer,  schema.registry.url , Avro, Topic and pom.xml
+
+Use cases: 
+The Producer API allows applications to send streams of data to topics in the Kafka cluster.
+
+Description :
+Producer consists of a pool of buffer space that holds records that haven't yet been transmitted to the server 
+as well as a background I/O thread that is responsible for turning these records into requests and transmitting 
+them to the cluster.
+
+Execution Steps:
+Pre requisites :
+1. java 1.7 
+2. maven 3.3.9 
+
+Project requires a pom.xml file to download all the dependencies and to execute this  pom.xml file enter the following commands
+     i)	mvn  package   (will download all the dependencies from pom.xml file)
+    ii)	To execute any java program  go to  the target directory folder and type
+     ->	java –cp “kafka*.jar:dependencies/*” classname  
+   iii)	kafa-topic --zookeeper localhost:2181 –list    //check broker list to match the topic name in code 
+   
+Note : Before you execute this code make sure topic is created in kafka if not follow the below commands to create topic.
+i)	To the confluent kafka bin folder 
+  -> ./kafka-topic –zookeeper locolhost:2181 –create  –topic topic_name –partitions 1 –replication-factors 1
+ii)	To list the created topic 
+  -> ./kafka-topic –zookeeper localhost:2181 –list  
+ 
+ 
+Known Issues: 
+1.Make sure first zookeeper, schema registry server and kafka server are running.
+
+External references: 
+1.	https://kafka.apache.org/090/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html
+2.	https://www.tutorialspoint.com/apache_kafka/apache_kafka_simple_producer_example.htm
+
+
+
+
