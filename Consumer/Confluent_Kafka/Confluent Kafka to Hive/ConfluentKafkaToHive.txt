@@ -1,0 +1,28 @@
+Problem Statement: 
+Write a java program which takes data from kafka Topic and Inserts into Hive table.
+
+Tags :
+KafkaConsumer, Hive, schema.registry.url, Topic and Avro. 
+
+Use cases: 
+Load all the kafka topic data into hive table.
+
+Description: 
+Kafka consumer takes the data from kafka topic  and insert into hive table.
+
+Execution Steps:
+Pre requisites :
+1. java 1.7
+2. maven 3.3.9 
+	 project requires a pom.xml file to download all the dependencies as given 
+3. To download all the packages enter "mvn package"  in the directory where pom.xml is present.
+4. Execute the hive connectivity program
+- > java –cp “/target/Hive 0.0.1-SNAPSHOT:target/dependency/* classname 
+
+
+Known Issues: 
+In this section we should add all the issues we have faced while executing this program.
+Additionally mention where we might get stuck or might face any issues. 
+
+External references: 
+1.	http://aseigneurin.github.io/2016/03/04/kafka-spark-avro-producing-and-consuming-avro-messages.html
