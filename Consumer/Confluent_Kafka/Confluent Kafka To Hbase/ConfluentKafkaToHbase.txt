@@ -10,10 +10,12 @@ Confluent Kafka reads the avro format data from source and stores it in kafka to
 
 Execution Steps:
 Pre requisites :
-1. java 1.8 >>
+1. java 1.7
 2. maven 3.3.9 
-	 project requires a pom.xml file to download all the dependencies related to this project.
-
+	 project requires a pom.xml file to download all the dependencies as given 
+3. To download all the packages enter "mvn package"  in the directory where pom.xml is present.
+4. Execute the hive connectivity program
+- > java –cp “/target/Habse 0.0.1-SNAPSHOT:target/dependency/* classname 
    
 Known Issues: 
 
